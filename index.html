@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fruit Brust</title>
 
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="/images/logo.png">
+
     <!--daisyui & tailwind-->
 
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.0/dist/full.css" rel="stylesheet" type="text/css" />
@@ -24,125 +27,121 @@
 <body class="font-ws">
     <header>
         <nav>
-            <div class="navbar flex justify-between bg-white lg:bg-red-400 lg:m-auto lg:my-7 w-4/5 lg:rounded-full">
-
-                <div class="navbar-start text-white">
-                    <div class="navbar-center flex order-1 text-black lg:text-white items-center lg:hidden">
-                        <img src="images/logo.png" alt="">
-                      <p class="btn btn-ghost normal-case text-xl">Fruit Burst</p>
-                    </div>
-                    
-                <div class="dropdown flex justify-between order-2">
-                    <label tabindex="0" class="btn btn-ghost lg:hidden text-black">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+            <div class="navbar lg:bg-red-400 rounded-full flex-row-reverse lg:flex-row w-4/5 mx-auto mt-3">
+                <div class="navbar-end lg:navbar-start">
+                  <div class="dropdown">
+                    <label tabindex="0" class="btn btn-ghost  lg:hidden">
+                        <i class="fa-solid fa-bars text-3xl "></i>
                     </label>
-                    <ul tabindex="0" class="menu menu-sm text-black dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                      <li><a>Item 1</a></li>
-                      <li><a>Item 2</a></li>
-                      <li><a>Item 3</a></li>
+                    <ul tabindex="0" class="menu menu-sm dropdown-content mt-1 z-[1] overflow-x-hidden text-right shadow bg-white rounded-box w-20 text-base ">
+                        <li><a>Home</a></li>
+                        <li><a>About Us</a></li>
+                        <li><a>Shop</a></li>
+                        <li><a>All Fruits</a></li>
                     </ul>
+                  </div>
+                  <div class="hidden lg:flex ">
+                  <ul class="menu  items-center  menu-horizontal text-white ">
+                    <li><a>Home</a></li>
+                    <li><a>About Us</a></li>
+                    <li><a>Shop</a></li>
+                    <li><a>All Fruits</a></li>
+                  </ul>
                 </div>
-                <div class="navbar-start hidden lg:flex">
-                    <ul class="menu menu-horizontal px-1 ">
-                      <li><a>Item 1</a></li>
-                      <li><a>Item 2</a></li>
-                      <li><a>Item 3</a></li>
-                    </ul>
+    
                 </div>
-                <div class="navbar-center hidden lg:flex order-1 text-black lg:text-white items-center">
-                    <img src="images/logo.png" alt="">
-                  <p class="btn btn-ghost normal-case text-3xl">Fruit Burst</p>
+                <div class="navbar-start justify-start lg:justify-center lg:navbar-center ">
+                    <div class="flex items-center gap-2">
+                        <img class="lg:w-8 w-7" src="images/logo.png" alt="logo">
+                        <span class="lg:text-3xl text-xl font-bold text-gray-900 lg:text-white">Fruit Burst</span>
                 </div>
                 </div>
-                
-                <div class="navbar-end rounded-full bg-white w-fit hidden lg:block">
-                    <input type="text" placeholder="Type here" class="input rounded-full" />
-                    <i class="fa-solid hover:cursor-pointer fa-magnifying-glass text-gray-500 px-4"></i>
+                <div class="navbar-end hidden lg:flex  h-3 mr-3 ">
+                    <input type="text"  placeholder="Search here " class=" relative input w-60 h-10 rounded-full"/> 
+                    <i class="fa-solid fa-magnifying-glass text-gray-500 absolute mr-3"></i>
                 </div>
-            </div>
+              </div>
         </nav>
 
         <!-- banner section -->
 
-        <!-- slide 1-->
-        <div class="carousel z-0 w-full lg:h-[500px]">
-            <div id="slide1" class="carousel-item relative w-full rounded-lg h-48 lg:h-[500px] overflow-hidden items-center m-auto">
-                <div class="hero min-h-screen" style="background-image: url(images/banner1.png);">
-                    <div class="hero-overlay bg-opacity-60"></div>
-                    <div class="hero-content text-center text-neutral-content">
-                      <div class="max-w-md">
-                        <h1 class="mb-5 text-2xl lg:text-5xl font-bold">Exotic tastes at your doorstep</h1>
-                        <p class="mb-5 text-xs lg:text-base">Exotic tastes at your doorstep</p>
-                        <button class="btn btn-error">Shop Now</button>
-                      </div>
-                    </div>
-                  </div>
-              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                <a href="#slide4" class="btn btn-circle">❮</a> 
-                <a href="#slide2" class="btn btn-circle">❯</a>
-              </div>
-            </div> 
+        
+        <section class="mt-10 mx-4 lg:mx-0">
+            <div class="carousel z-0 w-full">
 
-            <!-- slide 2-->
-            <div id="slide2" class="carousel-item relative w-full rounded-lg h-48 lg:h-[500px] overflow-hidden items-center m-auto">
-                <div class="hero min-h-screen" style="background-image: url(images/banner2.png);">
-                    <div class="hero-overlay bg-opacity-60"></div>
-                    <div class="hero-content text-center text-neutral-content">
-                      <div class="max-w-md">
-                        <h1 class="mb-5 text-2xl lg:text-5xl font-bold">Exotic tastes at your doorstep</h1>
-                        <p class="mb-5 text-xs lg:text-base">Exotic tastes at your doorstep</p>
-                        <button class="btn btn-error">Shop Now</button>
+                <!-- slide 1-->
+                <div id="slide1" class="carousel-item relative w-full">
+                    <div class="hero relative h-48 lg:h-auto rounded-2xl w-11/12 lg:w-4/5 mx-auto overflow-hidden" style="background-image: url(images/banner1.png);">
+                        <div class="hero-overlay bg-opacity-60 rounded-2xl overflow-hidden"></div>
+                        <div class="hero-content text-center text-neutral-content">
+                          <div class="max-w-md lg:my-28">
+                            <h1 class="mb-5 text-2xl lg:text-5xl font-bold">Exotic tastes at your doorstep</h1>
+                            <p class="mb-5 text-xs lg:text-base">Exotic tastes at your doorstep</p>
+                            <button class="btn btn-error text-white">Shop Now</button>
+                          </div>
+                        </div>
+                        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                            <a href="#slide4" class="btn btn-circle text-white bg-black border-none">❮</a> 
+                            <a href="#slide2" class="btn btn-circle text-white bg-black border-none">❯</a>
+                          </div>
                       </div>
-                    </div>
-                  </div>
-              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                <a href="#slide1" class="btn btn-circle">❮</a> 
-                <a href="#slide3" class="btn btn-circle">❯</a>
-              </div>
-            </div> 
-
-            <!-- slide 3-->
-            <div id="slide3" class="carousel-item relative w-full rounded-lg h-48 lg:h-[500px] overflow-hidden items-center m-auto">
-                <div class="hero min-h-screen" style="background-image: url(images/banner3.png);">
-                    <div class="hero-overlay bg-opacity-60"></div>
-                    <div class="hero-content text-center text-neutral-content">
-                      <div class="max-w-md">
-                        <h1 class="mb-5 text-2xl lg:text-5xl font-bold">Exotic tastes at your doorstep</h1>
-                        <p class="mb-5 text-xs lg:text-base">Exotic tastes at your doorstep</p>
-                        <button class="btn btn-error">Shop Now</button>
+                </div> 
+                <!-- slide 2-->
+                <div id="slide2" class="carousel-item relative w-full">
+                    <div class="hero relative h-48 lg:h-auto rounded-2xl w-11/12 lg:w-4/5 mx-auto" style="background-image: url(images/banner2.png);">
+                        <div class="hero-overlay bg-opacity-60 rounded-2xl"></div>
+                        <div class="hero-content text-center text-neutral-content">
+                          <div class="max-w-md lg:my-28">
+                            <h1 class="mb-5 text-2xl lg:text-5xl font-bold">Exotic tastes at your doorstep</h1>
+                            <p class="mb-5 text-xs lg:text-base">Exotic tastes at your doorstep</p>
+                            <button class="btn btn-error text-white">Shop Now</button>
+                          </div>
+                        </div>
+                        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                            <a href="#slide1" class="btn btn-circle text-white bg-black border-none">❮</a> 
+                            <a href="#slide3" class="btn btn-circle text-white bg-black border-none">❯</a>
+                          </div>
                       </div>
-                    </div>
-                  </div>
-              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                <a href="#slide2" class="btn btn-circle">❮</a> 
-                <a href="#slide4" class="btn btn-circle">❯</a>
-              </div>
-            </div> 
-
-            <!-- slide 4-->
-            <div id="slide4" class="carousel-item relative w-full rounded-lg h-48 lg:h-[500px] overflow-hidden items-center m-auto">
-                <div class="hero min-h-screen" style="background-image: url(images/banner4.png);">
-                    <div class="hero-overlay bg-opacity-60"></div>
-                    <div class="hero-content text-center text-neutral-content">
-                      <div class="max-w-md">
-                        <h1 class="mb-5 text-2xl lg:text-5xl font-bold">Exotic tastes at your doorstep</h1>
-                        <p class="mb-5 text-xs lg:text-base">Exotic tastes at your doorstep</p>
-                        <button class="btn btn-error">Shop Now</button>
+                </div> 
+                <!-- slide 3-->
+                <div id="slide3" class="carousel-item relative w-full">
+                    <div class="hero relative h-48 lg:h-auto rounded-2xl w-11/12 lg:w-4/5 mx-auto" style="background-image: url(images/banner3.png);">
+                        <div class="hero-overlay bg-opacity-60 rounded-2xl"></div>
+                        <div class="hero-content text-center text-neutral-content">
+                          <div class="max-w-md lg:my-28">
+                            <h1 class="mb-5 text-2xl lg:text-5xl font-bold">Exotic tastes at your doorstep</h1>
+                            <p class="mb-5 text-xs lg:text-base">Exotic tastes at your doorstep</p>
+                            <button class="btn btn-error text-white">Shop Now</button>
+                          </div>
+                        </div>
+                        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                            <a href="#slide2" class="btn btn-circle text-white bg-black border-none">❮</a> 
+                            <a href="#slide4" class="btn btn-circle text-white bg-black border-none">❯</a>
+                          </div>
                       </div>
-                    </div>
-                  </div>
-              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                <a href="#slide3" class="btn btn-circle">❮</a> 
-                <a href="#slide1" class="btn btn-circle">❯</a>
-              </div>
-            </div> 
-            
-              </div>
-            </div>
-          </div>
+                </div> 
+                <!-- slide 4-->
+                <div id="slide4" class="carousel-item relative w-full">
+                    <div class="hero relative h-48 lg:h-auto rounded-2xl w-11/12 lg:w-4/5 mx-auto" style="background-image: url(images/banner4.png);">
+                        <div class="hero-overlay bg-opacity-60 rounded-2xl"></div>
+                        <div class="hero-content text-center text-neutral-content">
+                          <div class="max-w-md lg:my-28">
+                            <h1 class="mb-5 text-2xl lg:text-5xl font-bold">Exotic tastes at your doorstep</h1>
+                            <p class="mb-5 text-xs lg:text-base">Exotic tastes at your doorstep</p>
+                            <button class="btn btn-error text-white">Shop Now</button>
+                          </div>
+                        </div>
+                        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                            <a href="#slide3" class="btn btn-circle text-white bg-black border-none">❮</a> 
+                            <a href="#slide1" class="btn btn-circle text-white bg-black border-none">❯</a>
+                          </div>
+                      </div>
+                </div>         
+        </section>
 
           <!-- banner fruits-->
-        <div class="w-3/4 h-48 mx-auto -mt-12 hidden lg:flex justify-around items-center relative z-10 gap-4 bg-white text-center rounded-xl drop-shadow-md space-y-3">
+        
+        <div class="w-2/3 h-48 mx-auto -mt-12 hidden lg:flex justify-around items-center relative z-10 gap-4 bg-white text-center rounded-xl drop-shadow-md space-y-3">
             <div>
                 <img src="images/fruit1.png" alt="">
                 <p>Lichu</p>
@@ -173,7 +172,7 @@
             <div class="container flex flex-col lg:flex-row justify-center lg:justify-between items-center w-4/5 m-auto mt-8 lg:mt-32">
                 <div>
                     <h2 class="font-extrabold text-4xl mb-5 text-center lg:text-left">Deal of the day</h2>
-                <p class="m-auto lg:m-0 w-3/4 text-gray-700 mb-5 text-center lg:text-left">Contrary to popular belief, is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                <p class="m-auto lg:m-0 w-11/12 lg:w-3/4 text-gray-700 mb-5 text-center lg:text-left">Contrary to popular belief, is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
                 </div>
                 <div>
                     <div class="grid grid-flow-col gap-5 text-center auto-cols-max">
@@ -242,13 +241,8 @@
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-red-400" />
                                       </div>
                                       <div class="flex justify-center items-center gap-3">
-                                        <div class="modal-action">
-                                            <!-- if there is a button in form, it will close the modal -->
-                                                    <button class="btn btn-outline btn-error">Close</button>
-                                        </div>
-                                        <div class="card-actions">
-                                            <button class="btn btn-error text-white">Buy Now</button>
-                                        </div>
+                                        <button class="btn btn-error text-white">Buy Now</button>
+                                        <button class="btn btn-outline btn-error">Close</button>
                                       </div>  
                                     </div>
                                   </div>
@@ -290,13 +284,8 @@
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-red-400" />
                                       </div>
                                       <div class="flex justify-center items-center gap-3">
-                                        <div class="modal-action">
-                                            <!-- if there is a button in form, it will close the modal -->
-                                                    <button class="btn btn-outline btn-error">Close</button>
-                                        </div>
-                                        <div class="card-actions">
-                                            <button class="btn btn-error text-white">Buy Now</button>
-                                        </div>
+                                        <button class="btn btn-error text-white">Buy Now</button>
+                                        <button class="btn btn-outline btn-error">Close</button>
                                       </div>  
                                     </div>
                                   </div>
@@ -338,13 +327,8 @@
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-red-400" />
                                       </div>
                                       <div class="flex justify-center items-center gap-3">
-                                        <div class="modal-action">
-                                            <!-- if there is a button in form, it will close the modal -->
-                                                    <button class="btn btn-outline btn-error">Close</button>
-                                        </div>
-                                        <div class="card-actions">
-                                            <button class="btn btn-error text-white">Buy Now</button>
-                                        </div>
+                                        <button class="btn btn-error text-white">Buy Now</button>
+                                        <button class="btn btn-outline btn-error">Close</button>
                                       </div>  
                                     </div>
                                   </div>
@@ -386,13 +370,8 @@
                                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-red-400" />
                                       </div>
                                       <div class="flex justify-center items-center gap-3">
-                                        <div class="modal-action">
-                                            <!-- if there is a button in form, it will close the modal -->
-                                                    <button class="btn btn-outline btn-error">Close</button>
-                                        </div>
-                                        <div class="card-actions">
-                                            <button class="btn btn-error text-white">Buy Now</button>
-                                        </div>
+                                        <button class="btn btn-error text-white">Buy Now</button>
+                                        <button class="btn btn-outline btn-error">Close</button>
                                       </div>  
                                     </div>
                                   </div>
@@ -415,19 +394,19 @@
                 <div class="hero-content text-center text-neutral-content">
                   <div>
                     <h1 class="mb-5 mt-6 text-4xl font-extrabold">Meet the team section</h1>
-                    <p class="mb-5 text-gray-300 max-w-md m-auto">Contrary to popular belief, is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                    <p class="mb-5 text-gray-300 w-11/12 lg:w-4/5 m-auto">Contrary to popular belief, is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
                     
                     <div class="grid justify-around lg:gap-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
 
                         <!-- card 1-->
                         <div class="card w-full bg-transparent">
-                            <figure>
+                            <figure class="px-10 pt-10">
                               <img src="/images/member1.png" class="rounded-xl" />
                             </figure>
                             <div class="card-body items-center text-center">
                               <h2 class="card-title">Awlad Hossain</h2>
                               <p>Fruits Expert</p>
-                              <div class="text-red-500 space-x-2 px-2">
+                              <div class="text-red-500 space-x-2">
                                 <i class="fa-brands fa-facebook"></i>
                                 <i class="fa-brands fa-instagram"></i>
                                 <i class="fa-brands fa-twitter"></i>
